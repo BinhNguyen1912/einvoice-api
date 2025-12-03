@@ -8,7 +8,7 @@ module.exports = {
   parserPreset: {
     parserOpts: {
       //regex parer de trich xuat type, scope, subject
-      headerPattern: /^(\w*)(?:\((.*)\))?: (.*)$/,
+      headerPattern: /^(\w*)\/#(\w*): (.*)$/,
       //cac group tuong ung voi regex o tren
       headerCorrespondence: ['type', 'scope', 'subject'],
     },

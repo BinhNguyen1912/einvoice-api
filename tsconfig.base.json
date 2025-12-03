@@ -15,7 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@common/constants/*": ["libs/constants/src/lib/*"]
+      "@common/constants/*": ["libs/constants/src/lib/*"],
+      "@commom/configuration/*": ["libs/configuration/src/lib/*"],
+      "@common/middlewares": ["libs/middlewares/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
