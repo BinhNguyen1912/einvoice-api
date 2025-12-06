@@ -17,12 +17,13 @@ async function bootstrap() {
   );
   const globalPrefix = AppModule.CONFIGURATION.GLOBAL_PREFIX;
   app.setGlobalPrefix(globalPrefix);
-  const port = AppModule.CONFIGURATION.APP_CONFIG.PORT || 3400;
+  const port = AppModule.CONFIGURATION.APP_CONFIG.PORT;
   const config = new DocumentBuilder()
     .setTitle('Einvoice BFF API')
     .setDescription('The Einvoice BFF API description')
     .setVersion('1.0.0')
     .addTag('einvoice-bff')
+    .addServer('http://localhost:3400')
     .addBearerAuth({
       type: 'http',
       scheme: 'bearer',

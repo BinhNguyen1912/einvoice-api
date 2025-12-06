@@ -29,6 +29,8 @@ export class BaseConfiguration {
   validate() {
     const errors = validateSync(this);
     if (errors.length > 0) {
+      console.log('[ERROR]', errors);
+
       const errorMessages = errors
         .map((err) => Object.values(err.constraints || {}).join(', '))
         .join('; ');
